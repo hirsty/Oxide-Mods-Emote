@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("Emote", "Hirsty", "1.0.10", ResourceId = 1353)]
+    [Info("Emote", "Hirsty", "1.0.11", ResourceId = 1353)]
     [Description("This will allow players to express their feelings!")]
     class Emote : CovalencePlugin
     {
@@ -177,8 +177,8 @@ namespace Oxide.Plugins
 		
         object OnBetterChat(Dictionary<string, object> Chat){
 			IPlayer player = (IPlayer)Chat["Player"];
-			if (Config["Emotes", Chat["Text"].ToString()] != null && EnableEmotes == "true" && player.HasPermission("emote.use"))
-           {
+			if (Config["Emotes", Chat["Message"].ToString()] != null && EnableEmotes == "true" && player.HasPermission("emote.use"))
+           { 
 				return false;
 		   }
 		   return Chat;
