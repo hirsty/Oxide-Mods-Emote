@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using Oxide.Core.Plugins;
 using System;
-using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("Emote", "Hirsty", "1.0.11", ResourceId = 1353)]
+    [Info("Emote", "Hirsty", "1.0.12", ResourceId = 1353)]
     [Description("This will allow players to express their feelings!")]
     class Emote : CovalencePlugin
     {
